@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.111.3" />
+    <title>Spacex | Javascript</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+
+    <!-- Bootstrap -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Start:Header  -->
+
+    <header data-bs-theme="black">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top bg-black border-bottom"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/spacex-logo.jpg " />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >MENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >WOMENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >KIDS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >ACCESSORIES</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >PREMIUM</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" aria-current="page" href="signup.html"
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">Search</a>
+              </li>
+              <li class="nav-item text-uppercase">
+                <a id="cartCount" class="nav-link" href="cart.html"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End:Header  -->
+
+    <main>
+      <!-- Cart Section -->
+      <div class="container text-center pt-5 mt-5 mb-md-5">
+        <!-- Start:Cart List -->
+        <div id="cart-container" class="row align-items-center">
+          <div class="col-md-12">
+            <div class="col-sm-12 col-md-12">
+              <table class="table text-md-start">
+                <tbody id="cartTableBody"></tbody>
+              </table>
+
+              <div>
+                <p class="border-0"></p>
+                <div class="text-end border-0 pt-4" colspan="2">
+                  <h5>Total</h5>
+                  <h5 class="sub-total fw-bold"></h5>
+                  <p>Shipping & taxes calculated at checkout</p>
+                </div>
+              </div>
+
+              <div class="border-0 pt-5 pb-5 d-flex flex-row-reverse">
+                <button
+                  id="checkoutBtn"
+                  type="button"
+                  class="btn btn-dark btn-lg rounded-0 btn-block w-10"
+                >
+                  Checkout <span class="fa fa-play"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start:Cart List -->
+        <!-- Start:Estimator -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="Panel">
+              <h2 class="Panel__Title Heading u-h2 ShippingEstimator__Title">
+                Estimate Shipping + Handling
+              </h2>
+
+              <div class="row text-start">
+                <div class="col-md-4 mb-3">
+                  <label for="username" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control rounded-0"
+                    id="username"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="inputCity" class="form-label">Country</label>
+                  <select
+                    id="countries"
+                    class="form-select"
+                    aria-label="countries"
+                  >
+                    <option value="" disabled selected>Select a Country</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="province" class="form-label">Province</label>
+                  <select id="province" class="form-select rounded-0" disabled>
+                    <option value="" disabled selected>
+                      Select a Province
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="city" class="form-label">City</label>
+                  <select
+                    id="city"
+                    class="form-select"
+                    aria-label="city"
+                    disabled
+                  >
+                    <option value="" disabled selected>Select a City</option>
+                  </select>
+                </div>
+
+                <div class="col-2">
+                  <label>&nbsp;</label>
+                  <button
+                    id="signup"
+                    type="submit"
+                    class="btn btn-dark btn-lg rounded-0 btn-block w-100 mt-2"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End:Recently Viewed -->
+      </div>
+
+      <hr />
+
+      <!-- Start:Recently Viewed -->
+      <div class="container text-center">
+        <div class="row py-5">
+          <div class="col-md-12">
+            <h3>RECENTLY VIEWED</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="featureContent position-relative">
+              <div class="featuredHoveredImg">
+                <img src="assets/img/product-nonhover.jpg" class="img-fluid" />
+              </div>
+              <div class="py-4">
+                <h4>SPACEX F9 MODEL</h4>
+                <p>$150.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End:Recently Viewed -->
+
+      <!-- FOOTER -->
+
+      <footer class="bg-black py-5">
+        <div class="container-fluid">
+          <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Pricing</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">About</a>
+            </li>
+          </ul>
+          <p class="text-body-primary text-center text-md-start">
+            &copy; 2023 Company, Inc
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Cart logic script  -->
+    <script src="assets/js/cart.js"></script>
+    <!-- Plus minu for range selector -->
+    <script>
+      $(document).ready(function () {
+        $(".minus").click(function () {
+          var $input = $(this).parent().find("input");
+          var count = parseInt($input.val()) - 1;
+          count = count < 1 ? 1 : count;
+          $input.val(count);
+          $input.change();
+          return false;
+        });
+        $(".plus").click(function () {
+          var $input = $(this).parent().find("input");
+          $input.val(parseInt($input.val()) + 1);
+          $input.change();
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

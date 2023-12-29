@@ -1,0 +1,348 @@
+ <!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.111.3" />
+    <title>Spacex | Javascript</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+
+    <!-- Bootstrap -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/checkout-progress.css" />
+  </head>
+
+  <body>
+    <!-- Start:Header  -->
+
+    <header data-bs-theme="black">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top bg-black border-bottom"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/spacex-logo.jpg " />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >MENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >WOMENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >KIDS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >ACCESSORIES</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >PREMIUM</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" aria-current="page" href="signup.html"
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">Search</a>
+              </li>
+              <li class="nav-item text-uppercase">
+                <a id="cartCount" class="nav-link" href="cart.html"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End:Header  -->
+
+    <main>
+      <!-- Cart Section -->
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-md-8 mt-5 pt-5 mx-auto" style="height: auto">
+            <div class="progress-container mb-5">
+              <div class="step">Step 1</div>
+              <div class="line"></div>
+              <div class="step">Step 2</div>
+              <div class="line"></div>
+              <div class="step">Step 3</div>
+            </div>
+
+            <div class="progress mb-3">
+              <div
+                id="progress-percentage"
+                class="progress-bar"
+                role="progressbar"
+                style="width: 0%"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                
+              </div>
+            </div>
+
+            <form id="stepper-form">
+              <fieldset>
+                <h4 class="display-5 fs-4 mb-3">User Details</h4>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    aria-describedby="firstName"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    aria-describedby="lastName"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <div id="email" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <button type="button" class="btn btn-dark next-btn">
+                  Next
+                </button>
+              </fieldset>
+
+              <fieldset>
+                <div class="mb-3">
+                  <h4 class="display-5 fs-4 mb-3">Address</h4>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      id="address"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="address">Address</label>
+                    <div class="fs-6 fw-light" id="charCount"></div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-dark prev-btn">
+                  Previous
+                </button>
+                <button type="button" class="btn btn-dark next-btn">
+                  Next
+                </button>
+              </fieldset>
+
+              <fieldset>
+                <!-- <h3>Step 3</h3> -->
+                <div class="mb-3">
+                  <h4 class="display-5 fs-4 mb-3">Cart Summary</h4>
+                  <table class="table cart-summary-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Sub-total</th>
+                      </tr>
+                    </thead>
+                    <tbody
+                      id="cart-summary-body"
+                      class="cart-summary-body"
+                    ></tbody>
+                  </table>
+                </div>
+                <h3
+                  id="cart-total"
+                  class="display-5 fs-5 fw-bold text-end"
+                ></h3>
+                <button type="button" class="btn btn-dark prev-btn">
+                  Previous
+                </button>
+                <button id="confirmBtn" type="submit" class="btn btn-dark">
+                  Confirm
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+
+      <footer class="bg-black py-5">
+        <div class="container-fluid">
+          <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Pricing</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">About</a>
+            </li>
+          </ul>
+          <p class="text-body-primary text-center text-md-start">
+            &copy; 2023 Company, Inc
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Cart logic script  -->
+    <script src="assets/js/cartcount.js"></script>
+    <script src="assets/js/checkout-progress.js"></script>
+
+    <!-- Plus minu for range selector -->
+    <script>
+      $(document).ready(function () {
+        $(".minus").click(function () {
+          var $input = $(this).parent().find("input");
+          var count = parseInt($input.val()) - 1;
+          count = count < 1 ? 1 : count;
+          $input.val(count);
+          $input.change();
+          return false;
+        });
+        $(".plus").click(function () {
+          var $input = $(this).parent().find("input");
+          $input.val(parseInt($input.val()) + 1);
+          $input.change();
+          return false;
+        });
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("uM_ZFUVoXTEY2vaaG");
+      })();
+    </script>
+  </body>
+</html>

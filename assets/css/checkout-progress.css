@@ -1,0 +1,33 @@
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .step {
+    width: 100px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+  }
+  
+  .line.active {
+    background-color: #007bff;
+  }
+  

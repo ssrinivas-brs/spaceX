@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.111.3" />
+    <title>Spacex | Javascript</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+
+    <!-- Bootstrap -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Start:Header  -->
+
+    <header data-bs-theme="black">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top bg-black border-bottom"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/spacex-logo.jpg " />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >MENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >WOMENS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >KIDS</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">Shirts</a>
+                  <a class="dropdown-item" href="list.html">Outerwear</a>
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >ACCESSORIES</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown pe-4">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="list.html"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  >PREMIUM</a
+                >
+                <div
+                  class="dropdown-menu rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <a class="dropdown-item" href="list.html">View All</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-uppercase"
+                  aria-current="page"
+                  href="signup.html"
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">Search</a>
+              </li>
+              <li class="nav-item text-uppercase">
+                <a id="cartCount" class="nav-link" href="cart.html"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End:Header  -->
+
+    <main>
+      <!-- Hero Section -->
+
+      <!-- Content Section -->
+      <div class="container-fluid text-center pt-5 mt-5 mb-md-5">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <!-- Page Content -->
+            <div class="container-fluid">
+              <h3 class="fw-medium text-center mt-4 mb-5">View All</h3>
+              <div class="form-group mb-2">
+                <div class="row mb-4">
+                  <div class="col-md-2 text-start">
+                    <label class="mb-2" for="items-per-page"
+                      >Items per page</label
+                    >
+                    <select
+                      id="items-per-page"
+                      class="form-select"
+                      aria-label="items per page"
+                    >
+                      <option value="8" selected>8</option>
+                      <option value="16">16</option>
+                      <option value="24">24</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 text-start">
+                    <label class="mb-2" for="sort-by">Sort By</label>
+                    <select
+                      id="sort-by"
+                      class="form-select"
+                      aria-label="sort-by"
+                    >
+                      <option value="name-asc" selected>
+                        Name - Ascending
+                      </option>
+                      <option value="name-desc">Name - Descending</option>
+                      <option value="price-asc">Price - Ascending</option>
+                      <option value="price-desc">Price - Descending</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 text-start">
+                    <label class="mb-2" for="product-type">Product Type</label>
+                    <select
+                      id="product-type"
+                      class="form-select"
+                      aria-label="product-type"
+                    >
+                      <option value="all" selected>All</option>
+                      <option value="tshirt">T-Shirt</option>
+                      <option value="hat">Hat</option>
+                      <option value="poster">Stickers</option>
+                      <option value="journal">Journal</option>
+                      <option value="bottle">Bottle</option>
+                      <option value="chain">Chain</option>
+                      <option value="cup">Cup</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 text-start">
+                    <label class="mb-2" for="product-color">Color</label>
+                    <select
+                      id="product-color"
+                      class="form-select"
+                      aria-label="product-color"
+                    >
+                      <option value="all" selected>All</option>
+                      <option value="black">Black</option>
+                      <option value="brown">Brown</option>
+                      <option value="white">White</option>
+                      <option value="grey">Grey</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 text-start">
+                    <label class="mb-2" for="product-size">Size</label>
+                    <select
+                      id="product-size"
+                      class="form-select"
+                      aria-label="product-size"
+                    ></select>
+                  </div>
+                  <div id="no-products" class="mt-5">No Products</div>
+                </div>
+              </div>
+
+              <div
+                id="product-list"
+                class="row text-center text-lg-start"
+              ></div>
+              <nav aria-label="Page navigation example">
+                <ul
+                  id="pagination"
+                  class="pagination justify-content-center"
+                ></ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container text-center">
+        <div class="row py-5">
+          <div class="col-md-12">
+            <h3>RECENTLY VIEWED</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="featureContent position-relative">
+              <div class="featuredHoveredImg">
+                <img src="assets/img/product-nonhover.jpg" class="img-fluid" />
+              </div>
+              <div class="py-4">
+                <h4>SPACEX F9 MODEL</h4>
+                <p>$150.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <footer class="bg-black py-5">
+        <div class="container-fluid">
+          <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">Pricing</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2">About</a>
+            </li>
+          </ul>
+          <p class="text-body-primary text-center text-md-start">
+            &copy; 2023 Company, Inc
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cartcount.js"></script>
+    <script src="assets/js/pagination.js"></script>
+    <!-- Plus minu for range selector -->
+    <script>
+      $(document).ready(function () {
+        $(".minus").click(function () {
+          var $input = $(this).parent().find("input");
+          var count = parseInt($input.val()) - 1;
+          count = count < 1 ? 1 : count;
+          $input.val(count);
+          $input.change();
+          return false;
+        });
+        $(".plus").click(function () {
+          var $input = $(this).parent().find("input");
+          $input.val(parseInt($input.val()) + 1);
+          $input.change();
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
